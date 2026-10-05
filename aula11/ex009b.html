@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Nacionalidade</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            background-color: #262353;
+            color: white;
+            border: none;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 18px;
+            text-align: center;
+            background-color: #5954a3;
+            border: none;
+            color: white;
+            border-radius: 6px;
+            border: 2px solid #7d77ce;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Nacionalidade</h1>
+    Digite sua Nacionalidade: <input type="text" name="nac" id="nac">
+    <input type="button" value="Verificar" onclick="verify()">
+    <div id="res"></div>
+
+    <script>
+        function verify() {
+            let nac = document.getElementById('nac').value.trim()
+            let res = document.getElementById('res')
+            res.innerHTML = `<p>Sua nacionalidade é: </p>`
+            
+            if (nac === 'Brasil' || nac === 'brasil') {
+                res.innerHTML += `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsRDLCtS8Wb98oiGjoHdxaZi1CFkn-vmIwaJnpkvn97A&s"> `
+            } else {
+                res.innerHTML += `<img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Flag_of_the_United_Nations.svg?utm_source=pt.wikipedia.org&utm_campaign=index&utm_content=original"> `
+            }
+        }
+    </script>
+</body>
+</html>
