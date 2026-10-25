@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Integrante</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Verificador de Integrante</h1>
+    </header>
+
+    <section>
+        <div>
+            <p>Integrante:
+                <input type="text" name="txtnome" id="txtnome">
+            </p>
+            <p>Grupo:
+                <input type="radio" name="radgroup" id="enhypen">
+                <label for="enhypen">ENHYPEN</label>
+                <input type="radio" name="radgroup" id="txt">
+                <label for="txt">TXT</label>
+                <input type="radio" name="radgroup" id="cortis">
+                <label for="cortis">CORTIS</label>
+            </p>
+            <p>
+                <input class="btn" type="button" value="Verificar" onclick="verificar()">
+            </p>
+        </div>
+
+        <div id="res">
+            Preencha os dados acima para ver o resultado!
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; CursoemVideo | Adrielly</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
